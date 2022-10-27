@@ -205,6 +205,14 @@ describe('ast transformations', () => {
         [
             '.test { padding-top: 1px; padding-right: 2px; padding-bottom: 1px; padding-left: 2px }',
             '.test{padding:1px 2px}'
+        ],
+        [
+            '@media (min-width: 600px) { .media { width: 150px} }',
+            '@media (min-width:600px){.media{width:150px}}'
+        ],
+        [
+            '@container (min-width : 700px) { .main { width: 200px } }',
+            '@container (min-width:700px){.main{width:200px}}'
         ]
     ];
 
